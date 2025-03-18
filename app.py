@@ -1,3 +1,5 @@
+import os
+
 # https://fsymbols.com/pt/geradores/
 print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
 
@@ -8,6 +10,10 @@ print('4. Sair\n')
 
 opcao_escolhida = int(input('Escolha uma opção: '))
 
+def finalizar_app():
+    print('Encerrando o programa\n')
+    os.system('clear')
+
 if opcao_escolhida == 1:
     print('Cadastrar restaurante')
 elif opcao_escolhida == 2:
@@ -15,4 +21,4 @@ elif opcao_escolhida == 2:
 elif opcao_escolhida == 3:
     print('Ativar restaurantes')
 else:
-    print('Encerrando o programa')
+    finalizar_app()
