@@ -1,5 +1,16 @@
 import os
 
+restaurantes = []
+
+def cadastrar_restaurante():
+   os.system('clear')
+   print('\nCadastrar restaurante')
+   nome_restaurante = input('Nome do restaurante: ')
+   restaurantes.append(nome_restaurante)
+   print(f'O restaurante {nome_restaurante} foi cadastrado com sucesso!')
+   input('\nPressione ENTER para continuar...')
+   main()
+
 def exibir_nome_programa():
    # https://fsymbols.com/pt/geradores/
    print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
@@ -25,7 +36,7 @@ def escolher_opcoes():
       
       match opcao_escolhida:
          case 1:
-            print('Cadastrar restaurante')
+            cadastrar_restaurante()
          case 2:
             print('Listar restaurantes')
          case 3:
