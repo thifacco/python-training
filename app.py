@@ -11,6 +11,14 @@ def cadastrar_restaurante():
    input('\nPressione ENTER para continuar...')
    main()
 
+def listar_restaurantes():
+   os.system('clear')
+   print('Restaurantes cadastrados')
+   for restaurante in restaurantes:
+      print(f'- {restaurante}')
+   input('\nPressione ENTER para continuar...')
+   main()
+
 def exibir_nome_programa():
    # https://fsymbols.com/pt/geradores/
    print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
@@ -38,7 +46,7 @@ def escolher_opcoes():
          case 1:
             cadastrar_restaurante()
          case 2:
-            print('Listar restaurantes')
+            listar_restaurantes()
          case 3:
             print('Ativar restaurantes')
          case 4:
