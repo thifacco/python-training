@@ -9,15 +9,23 @@ restaurantes = [
 ]
 
 def voltar_menu_principal():
+   '''Função que aguarda o usuário pressionar ENTER para voltar ao menu principal'''
    input('\nPressione ENTER para continuar...')
    main()
 
 def exibir_subtitulo(subtitulo):
+   '''
+   Função que exibe um subtitulo na tela
+   
+   Inputs:
+      - subtitulo: str
+   '''
    os.system('clear')
    print(f'{subtitulo}')
    print('\n')
 
 def cadastrar_restaurante():
+   '''Função que cadastra um restaurante na lista de restaurantes'''
    exibir_subtitulo('Cadastrar restaurante')
    nome_restaurante = input('Nome do restaurante: ')
    restaurantes.append({'nome':nome_restaurante, 'ativo':False})
@@ -25,6 +33,7 @@ def cadastrar_restaurante():
    voltar_menu_principal()
 
 def listar_restaurantes():
+   '''Função que lista os restaurantes cadastrados'''
    exibir_subtitulo('Listar restaurantes')
    print('Nome'.ljust(20), '| Estado')
    print('-'*30)
@@ -35,6 +44,7 @@ def listar_restaurantes():
    voltar_menu_principal()
 
 def alternar_estado_restaurante():
+   '''Função que altera o estado de um restaurante'''
     exibir_subtitulo('Alterando estado do restaurante')
     nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
     restaurante_encontrado = False
@@ -52,24 +62,29 @@ def alternar_estado_restaurante():
     voltar_menu_principal()
 
 def exibir_nome_programa():
+   '''Função que exibe o nome do programa'''
    # https://fsymbols.com/pt/geradores/
    print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
 
 def exibir_opcoes():
+   '''Função que exibe as opções do menu principal'''
    print('1. Cadastrar restaurante')
    print('2. Listar restaurante')
    print('3. Alternar estado do restaurante')
    print('4. Sair\n')
 
 def finalizar_app():
-    print('Encerrando o programa\n')
+   '''Função que finaliza a aplicação'''
+    print('Encerrando a aplicação\n')
     os.system('clear')
 
 def opcao_invalida():
+   '''Função que exibe uma mensagem de opção inválida'''
    exibir_subtitulo('Opção inválida')
    voltar_menu_principal()
 
 def escolher_opcoes():
+   '''Função que aguarda o usuário escolher uma opção'''
    try:
       opcao_escolhida = int(input('Escolha uma opção: '))
       
@@ -88,6 +103,7 @@ def escolher_opcoes():
       opcao_invalida()
 
 def main():
+   '''Função principal'''
    os.system('clear')
    exibir_nome_programa()
    exibir_opcoes()
