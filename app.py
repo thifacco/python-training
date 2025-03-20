@@ -2,22 +2,26 @@ import os
 
 restaurantes = []
 
-def cadastrar_restaurante():
-   os.system('clear')
-   print('\nCadastrar restaurante')
-   nome_restaurante = input('Nome do restaurante: ')
-   restaurantes.append(nome_restaurante)
-   print(f'O restaurante {nome_restaurante} foi cadastrado com sucesso!')
+def voltar_menu_principal():
    input('\nPressione ENTER para continuar...')
    main()
 
-def listar_restaurantes():
+def exibir_subtitulo(subtitulo):
    os.system('clear')
-   print('Restaurantes cadastrados')
+   print(f'{subtitulo}\n')
+
+def cadastrar_restaurante():
+   exibir_subtitulo('Cadastrar restaurante')
+   nome_restaurante = input('Nome do restaurante: ')
+   restaurantes.append(nome_restaurante)
+   print(f'O restaurante {nome_restaurante} foi cadastrado com sucesso!')
+   voltar_menu_principal()
+
+def listar_restaurantes():
+   exibir_subtitulo('Listar restaurantes')
    for restaurante in restaurantes:
       print(f'- {restaurante}')
-   input('\nPressione ENTER para continuar...')
-   main()
+   voltar_menu_principal()
 
 def exibir_nome_programa():
    # https://fsymbols.com/pt/geradores/
@@ -34,9 +38,8 @@ def finalizar_app():
     os.system('clear')
 
 def opcao_invalida():
-   print('Opção inválida\n')
-   input('Pressione ENTER para continuar...')
-   main()
+   exibir_subtitulo('Opção inválida')
+   voltar_menu_principal()
 
 def escolher_opcoes():
    try:
