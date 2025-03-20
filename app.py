@@ -1,6 +1,12 @@
 import os
 
-restaurantes = []
+restaurantes = [
+   {'nome': 'Maniva', 'ativo': True},
+   {'nome': 'Café Garden', 'ativo': False},
+   {'nome': 'Jacaré Madalena', 'ativo': True},
+   {'nome': 'Fogo de Chão', 'ativo': False},
+   {'nome': 'Marina Del Mare', 'ativo': True},
+]
 
 def voltar_menu_principal():
    input('\nPressione ENTER para continuar...')
@@ -20,7 +26,9 @@ def cadastrar_restaurante():
 def listar_restaurantes():
    exibir_subtitulo('Listar restaurantes')
    for restaurante in restaurantes:
-      print(f'- {restaurante}')
+      nome = restaurante['nome']
+      ativo = restaurante['ativo']
+      print(f'- {nome} | Ativo: {ativo}')
    voltar_menu_principal()
 
 def exibir_nome_programa():
