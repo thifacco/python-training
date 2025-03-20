@@ -27,8 +27,8 @@ def listar_restaurantes():
    exibir_subtitulo('Listar restaurantes')
    for restaurante in restaurantes:
       nome = restaurante['nome']
-      ativo = restaurante['ativo']
-      print(f'- {nome} | Ativo: {ativo}')
+      ativo = 'ativo' if restaurante['ativo'] else 'inativo'
+      print(f'- {nome} | {ativo}')
    voltar_menu_principal()
 
 def alternar_estado_restaurante():
