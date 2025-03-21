@@ -1,9 +1,8 @@
-# Say Hello Python 🐍
+# Treinamento Python 🐍
 
 Monorepo com aplicações de treino para aprender a linguagem de programação Python.
 
 ## The Zen Of Python
-Execute o comando `import this` no Terminal.
 
 ```
 Beautiful is better than ugly.
