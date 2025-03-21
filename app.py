@@ -8,10 +8,11 @@ restaurantes = [
    {'nome': 'Marina Del Mare', 'ativo': True},
 ]
 
-def voltar_menu_principal():
-   '''Função que aguarda o usuário pressionar ENTER para voltar ao menu principal'''
-   input('\nPressione ENTER para continuar...')
-   main()
+def exibir_nome_programa():
+   '''Função que exibe o nome do programa'''
+   os.system('clear')
+   # https://fsymbols.com/pt/geradores/
+   print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
 
 def exibir_subtitulo(subtitulo):
    '''
@@ -23,6 +24,11 @@ def exibir_subtitulo(subtitulo):
    os.system('clear')
    print(f'{subtitulo}')
    print('\n')
+
+def voltar_menu_principal():
+   '''Função que aguarda o usuário pressionar ENTER para voltar ao menu principal'''
+   input('\nPressione ENTER para continuar...')
+   main()
 
 def cadastrar_restaurante():
    '''Função que cadastra um restaurante na lista de restaurantes'''
@@ -45,26 +51,21 @@ def listar_restaurantes():
 
 def alternar_estado_restaurante():
    '''Função que altera o estado de um restaurante'''
-    exibir_subtitulo('Alterando estado do restaurante')
-    nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
-    restaurante_encontrado = False
+   exibir_subtitulo('Alterando estado do restaurante')
+   nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
+   restaurante_encontrado = False
     
-    for restaurante in restaurantes:
-        if nome_restaurante == restaurante['nome']:
-            restaurante_encontrado = True
-            restaurante['ativo'] = not restaurante['ativo']
-            mensagem = f'O restaurante {nome_restaurante} foi ativado com sucesso' if restaurante['ativo'] else f'O restaurante {nome_restaurante} foi desativado com sucesso'
-            print(mensagem)
-    
-    if not restaurante_encontrado:
+   for restaurante in restaurantes:
+      if nome_restaurante == restaurante['nome']:
+         restaurante_encontrado = True
+         restaurante['ativo'] = not restaurante['ativo']
+         mensagem = f'O restaurante {nome_restaurante} foi ativado com sucesso' if restaurante['ativo'] else f'O restaurante {nome_restaurante} foi desativado com sucesso'
+         print(mensagem)
+   
+   if not restaurante_encontrado:
       print('O restaurante não foi encontrado.')  
         
-    voltar_menu_principal()
-
-def exibir_nome_programa():
-   '''Função que exibe o nome do programa'''
-   # https://fsymbols.com/pt/geradores/
-   print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
+   voltar_menu_principal()
 
 def exibir_opcoes():
    '''Função que exibe as opções do menu principal'''
@@ -75,8 +76,8 @@ def exibir_opcoes():
 
 def finalizar_app():
    '''Função que finaliza a aplicação'''
-    print('Encerrando a aplicação\n')
-    os.system('clear')
+   print('Encerrando a aplicação\n')
+   os.system('clear')
 
 def opcao_invalida():
    '''Função que exibe uma mensagem de opção inválida'''
@@ -104,7 +105,6 @@ def escolher_opcoes():
 
 def main():
    '''Função principal'''
-   os.system('clear')
    exibir_nome_programa()
    exibir_opcoes()
    escolher_opcoes()
