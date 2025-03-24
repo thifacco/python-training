@@ -1,17 +1,10 @@
 class Restaurante:
-    nome = ''
-    categoria = ''
-    ativo = False
+   def __init__(self, nome, categoria):
+    self.nome = nome
+    self.categoria = categoria
+    self.ativo = False
     
-restaurante_praca = Restaurante()
-restaurante_praca.nome = 'Restaurante da Praça'
-restaurante_praca.categoria = 'Prato Feito'
-restaurante_pizza = Restaurante()
-
-restaurantes = [restaurante_praca, restaurante_pizza]
-
-# imprime o objeto completo
-print(dir(restaurantes))
+restaurante_praca = Restaurante('Restaurante da Praça', 'Prato Feito')
 
 # imprime os atributos do objeto
 print(vars(restaurante_praca))
