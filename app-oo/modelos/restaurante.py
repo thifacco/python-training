@@ -5,7 +5,7 @@ class Restaurante:
    def __init__(self, nome, categoria):
     self.nome = nome
     self.categoria = categoria
-    self.ativo = False
+    self._ativo = False
     Restaurante.Restaurantes.append(self)
    
    # método para exibir o objeto em formato texto (especial)
@@ -16,6 +16,10 @@ class Restaurante:
    def listar_restaurantes():
     for restaurante in Restaurante.Restaurantes:
         print(f'Nome: {restaurante.nome} | Categoria: {restaurante.categoria} | Ativo: {restaurante.ativo}')
+   
+   @property
+   def ativo(self):
+    return '✅' if self._ativo == True else '❌'
     
 restaurante_praca = Restaurante('Restaurante da Praça', 'Prato Feito')
 
