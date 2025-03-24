@@ -25,22 +25,3 @@ class Restaurante:
 
    def alternar_estado(self):
       self._ativo = not self._ativo
-    
-restaurante_praca = Restaurante('Bresser', 'Paulistano')
-restaurante_praca.alternar_estado()
-restaurante_pizza = Restaurante('Pizza Hut', 'Pizzaria')
-
-# imprime as propriedades do objeto
-# print(dir(restaurante_praca))
-
-# imprime os atributos do objeto
-# print(vars(restaurante_praca))
-
-# imprime o valor de um atributo específico
-# print(restaurante_praca._nome)
-
-# mostra o objeto em formato texto
-# print(restaurante_praca)
-
-# chama o método listar_restaurantes
-Restaurante.listar_restaurantes()
