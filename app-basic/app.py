@@ -1,11 +1,11 @@
 import os
 
 restaurantes = [
-   {'nome': 'Maniva', 'ativo': True},
-   {'nome': 'Café Garden', 'ativo': False},
-   {'nome': 'Jacaré Madalena', 'ativo': True},
-   {'nome': 'Fogo de Chão', 'ativo': False},
-   {'nome': 'Marina Del Mare', 'ativo': True},
+   {'nome': 'Maniva', 'categoria': 'Gourmet', 'ativo': True},
+   {'nome': 'Café Garden', 'categoria': 'Gormet', 'ativo': False},
+   {'nome': 'Jacaré Madalena', 'categoria': 'Grill', 'ativo': True},
+   {'nome': 'Fogo de Chão', 'categoria': 'Churrascaria', 'ativo': False},
+   {'nome': 'Marina Del Mare', 'categoria': 'Italiano', 'ativo': True},
 ]
 
 def exibir_nome_programa():
@@ -34,19 +34,21 @@ def cadastrar_restaurante():
    '''Função que cadastra um restaurante na lista de restaurantes'''
    exibir_subtitulo('Cadastrar restaurante')
    nome_restaurante = input('Nome do restaurante: ')
-   restaurantes.append({'nome':nome_restaurante, 'ativo':False})
+   categoria_restaurante = input('Categoria do restaurante: ')
+   restaurantes.append({'nome':nome_restaurante, 'categoria':categoria_restaurante, 'ativo':False})
    print(f'O restaurante {nome_restaurante} foi cadastrado com sucesso!')
    voltar_menu_principal()
 
 def listar_restaurantes():
    '''Função que lista os restaurantes cadastrados'''
    exibir_subtitulo('Listar restaurantes')
-   print('Nome'.ljust(20), '| Estado')
-   print('-'*30)
+   print('Nome'.ljust(20), '| Categoria'.ljust(22), '| Estado')
+   print('-'*60)
    for restaurante in restaurantes:
       nome = restaurante['nome']
+      categoria = restaurante['categoria']
       ativo = 'ativo' if restaurante['ativo'] else 'inativo'
-      print(f'{nome.ljust(20)} | {ativo}')
+      print(f'{nome.ljust(20)} | {categoria.ljust(20)} | {ativo}')
    voltar_menu_principal()
 
 def alternar_estado_restaurante():
