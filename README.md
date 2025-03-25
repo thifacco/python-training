@@ -1,6 +1,6 @@
 # Treinamento Python 🐍
 
-Monorepo com aplicações de treino para aprender a linguagem de programação Python.
+Aplicações de treinamento para aprender a linguagem de programação Python.
 
 ## The Zen Of Python
 
