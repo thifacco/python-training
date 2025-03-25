@@ -9,8 +9,7 @@ restaurante_marie.adicionar_cardapio(bebida_sangria)
 restaurante_marie.adicionar_cardapio(prato_macarrao)
 
 def main():
-   print(bebida_sangria)
-   print(prato_macarrao)
+   restaurante_marie.exibir_cardapio
 
 if __name__ == '__main__':
    main()
