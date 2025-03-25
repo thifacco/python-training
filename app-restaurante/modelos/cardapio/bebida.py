@@ -1,4 +1,4 @@
-from modelos.cardapio.ItemCardapio.item_cardapio import ItemCardapio
+from modelos.cardapio.item_cardapio import ItemCardapio
 
 class Bebida(ItemCardapio):
    def __init__(self, nome, preco, tamanho):
