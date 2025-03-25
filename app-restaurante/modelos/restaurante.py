@@ -1,4 +1,5 @@
 from modelos.avaliacao import Avaliacao
+from modelos.cardapio.item_cardapio import ItemCardapio
 
 class Restaurante:
    Restaurantes = []
@@ -45,9 +46,6 @@ class Restaurante:
       
       return media
 
-   def adicionar_bebida_cardapio(self, bebida):
-      self._cardapio.append(bebida)
-   
-   def adicionar_prato_cardapio(self, prato):
-      self._cardapio.append(prato)
-   
+   def adicionar_cardapio(self, item):
+      if isinstance(item, ItemCardapio):
+         self._cardapio.append(item)
