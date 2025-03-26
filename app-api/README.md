@@ -1,16 +1,10 @@
-# 🐍 Catálogo de Restaurantes - Sabor Express
+# 🐍 Python API
 
-Aplicação desenvolvida com Python que com exemplo de aplicação de API e Orientação a Objetos.
-
-Para executar a aplicação, abra um Terminal e execute o comando:
-```
-python3 app.py
-
-```
+Aplicação API desenvolvida com Python.
 
 ## Ambiente virtual (VENV)
 
-Iniciar o ambiente virtual
+Criar o ambiente virtual
 ```
 python3 -m venv venv
 ```
@@ -32,10 +26,10 @@ pip install requests
 
 Gerar lista de todos as dependências instaladas no ambiente
 ```
-pipe freeze
+pip freeze
 ```
 
 Salvar dependências listadas em arquivo externo
 ```
-pipe freeze > requirements.txt
+pip freeze > requirements.txt
 ```
