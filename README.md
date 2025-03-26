@@ -2,6 +2,8 @@
 
 Aplicações de treinamento para aprender a linguagem de programação Python.
 
+Segue a formação *Aprenda a Programar em Python com Orientação a Objetos* na [Alura](https://cursos.alura.com.br/formacao-linguagem-python)
+
 ## The Zen Of Python
 
 ```

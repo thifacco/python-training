@@ -1,4 +1,2 @@
-app-oo/modelos/__pycache__
-app-oo/modelos/cardapio/__pycache__
-
-app-api/venv
+*/__pycache__
+*/venv
