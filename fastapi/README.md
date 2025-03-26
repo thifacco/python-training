@@ -18,9 +18,15 @@ Instalar dependências
 ```
 pip install fastapi
 pip install uvicorn
+pip install requests
 ```
 
 Executar a aplicação
 ```
 uvicorn main:app --reload
+```
+
+Documentação da API: [Docs](http://127.0.0.1:8000/docs)
+```
+http://127.0.0.1:8000/docs
 ```

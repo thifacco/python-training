@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "ca56631a-afef-4b7c-8559-917cf4c5525e",
+		"name": "Python FastAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23962566"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/hello",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/restaurantes/?restaurante=McDonald’s",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurantes",
+						""
+					],
+					"query": [
+						{
+							"key": "restaurante",
+							"value": "McDonald’s"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
